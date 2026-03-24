@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Redirecting...</title>
-  <script>
-    function detectAndRedirect() {
-      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+<script>
+  setTimeout(function () {
+    var ua = navigator.userAgent.toLowerCase();
 
-      // Android
-      if (/android/i.test(userAgent)) {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.careerlauncher.myzone";
-      }
-      // iOS
-      else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        window.location.href = "https://apps.apple.com/in/app/career-launcher-myzone/id6745928627";
-      }
-      // Other (Desktop fallback)
-      else {
-        window.location.href = "https://play.google.com/store/apps/details?id=com.careerlauncher.myzone";
-      }
+    if (ua.includes("android")) {
+      window.location.href = "https://play.google.com/store/apps/details?id=com.careerlauncher.myzone";
+    } else if (ua.includes("iphone") || ua.includes("ipad")) {
+      window.location.href = "https://apps.apple.com/in/app/career-launcher-myzone/id6745928627";
     }
-
-    window.onload = detectAndRedirect;
-  </script>
-</head>
-<body>
-  <p>Redirecting to app store...</p>
-</body>
-</html>
+  }, 1500); // delay prevents warning
+</script>
