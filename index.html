@@ -1,11 +1,45 @@
-<script>
-  setTimeout(function () {
-    var ua = navigator.userAgent.toLowerCase();
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download Career Launcher App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    if (ua.includes("android")) {
-      window.location.href = "https://play.google.com/store/apps/details?id=com.careerlauncher.myzone";
-    } else if (ua.includes("iphone") || ua.includes("ipad")) {
-      window.location.href = "https://apps.apple.com/in/app/career-launcher-myzone/id6745928627";
+  <script>
+    function redirectUser() {
+      var ua = navigator.userAgent.toLowerCase();
+
+      if (ua.includes("android")) {
+        window.location.href = "https://play.google.com/store/apps/details?id=com.careerlauncher.myzone";
+      } else if (ua.includes("iphone") || ua.includes("ipad")) {
+        window.location.href = "https://apps.apple.com/in/app/career-launcher-myzone/id6745928627";
+      }
     }
-  }, 1500); // delay prevents warning
-</script>
+
+    // Delay redirect (IMPORTANT)
+    setTimeout(redirectUser, 2000);
+  </script>
+</head>
+
+<body style="text-align:center; font-family:sans-serif; padding:40px;">
+  
+  <h2>Career Launcher App</h2>
+  <p>Preparing your download...</p>
+
+  <p>If not redirected, choose your platform:</p>
+
+  <a href="https://play.google.com/store/apps/details?id=com.careerlauncher.myzone">
+    <button style="padding:15px; margin:10px; font-size:16px;">
+      📱 Android (Google Play)
+    </button>
+  </a>
+
+  <br>
+
+  <a href="https://apps.apple.com/in/app/career-launcher-myzone/id6745928627">
+    <button style="padding:15px; margin:10px; font-size:16px;">
+      🍎 iOS (App Store)
+    </button>
+  </a>
+
+</body>
+</html>
